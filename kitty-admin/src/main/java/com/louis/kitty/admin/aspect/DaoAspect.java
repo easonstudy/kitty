@@ -46,7 +46,7 @@ public class DaoAspect {
 			return pjp.proceed();
 		}
 		HttpServletRequest request = attributes.getRequest();
-		String token = request.getHeader("token");
+		String token = request.getHeader("Authorization");
 		String username = getUserName();
 		if (token != null && username != null) {
 			Object[] objects = pjp.getArgs();

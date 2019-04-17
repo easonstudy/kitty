@@ -20,7 +20,7 @@ public class JwtAuthenticationProvider extends DaoAuthenticationProvider {
         setUserDetailsService(userDetailsService);
     }
 
-    @Override
+	@Override
 	protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication)
 			throws AuthenticationException {
 		if (authentication.getCredentials() == null) {

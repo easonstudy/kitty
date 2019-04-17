@@ -89,7 +89,7 @@ public class SysUserController {
 		return HttpResult.ok(authentication.getPrincipal());
 	}
 
-	@PreAuthorize("hasAuthority('sys:user:view')")
+	//@PreAuthorize("hasAuthority('sys:user:view')")
 	@GetMapping(value="/findPermissions")
 	public HttpResult findPermissions(@RequestParam String name) {
 		return HttpResult.ok(sysUserService.findPermissions(name));
